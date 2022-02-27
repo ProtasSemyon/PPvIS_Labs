@@ -17,7 +17,10 @@ if __name__ == "__main__":
         atm = ATM(bank, data["infoATM"])
     except KeyError:
         print("Incorrect database")
-    except ValueError:
-        print("Incorrect database")
+    except ValueError as exception:
+        print("Incorrect database", exception, sep="\n")
     else:
         atm.start()
+        data: dict = {"infoBank": bank.getData(), "infoATM": atm.getData()}
+        with open(databasePath, "w") as dataFile:
+            json.dump(data, dataFile, indent=4)
