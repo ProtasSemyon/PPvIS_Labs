@@ -4,7 +4,7 @@ from typing import List
 class BankAccount:
     __numberSize = 10
 
-    def __init__(self, data: dict):
+    def __init__(self, data: dict) -> None:
         self.__ownerFirstName: str = data["firstName"]
         if type(self.__ownerFirstName) is not str:
             raise ValueError("Incorrect first name")
@@ -25,12 +25,38 @@ class BankAccount:
         for card in data["cards"]:
             self.__cards.append(Card(card, self))
 
+    def getBalance(self) -> float:
+        return self.__balance
+
+    def decreaseBalance(self, delta: float) -> None:
+        self.__balance -= delta
+
+    def increaseBalance(self, delta: float) -> None:
+        self.__balance += delta
+
+    def getCards(self):
+        return self.__cards
+
+    def getOwnerFirstName(self) -> str:
+        return self.__ownerFirstName
+
+    def getOwnerLastName(self) -> str:
+        return self.__ownerLastName
+
+    def getData(self) -> dict:
+        data: dict = dict()
+        data.update({"firstName": self.__ownerFirstName, "lastName": self.__ownerLastName, "number": self.__number,
+                     "balance": self.__balance})
+        data.update({"cards": [card.getData() for card in self.__cards]})
+        return data
+
 
 class Card:
     __numberSize = 16
     __pinSize = 4
+    __inputPinAttempts = 3
 
-    def __init__(self, data: dict, account: BankAccount):
+    def __init__(self, data: dict, account: BankAccount) -> None:
         self.__account = account
         self.__number = data["cardNum"]
         if len(self.__number) != self.__numberSize or not self.__number.isdigit():
@@ -39,3 +65,42 @@ class Card:
         self.__pin = data["cardPIN"]
         if len(self.__pin) != self.__pinSize or not self.__pin.isdigit():
             raise ValueError("Incorrect card PIN")
+
+        if data["status"] == "unlock":
+            self.__locked: bool = False
+        elif data["status"] == "lock":
+            self.__locked: bool = True
+        else:
+            raise ValueError("Invalid card status")
+
+    def checkPIN(self, pin: str) -> bool:
+        if len(pin) is not self.__pinSize or not pin.isdigit():
+            raise ValueError("Invalid input")
+        if pin == self.__pin:
+            return True
+        else:
+            return False
+
+    def getBankAccount(self) -> BankAccount:
+        return self.__account
+
+    def getNumber(self) -> str:
+        return self.__number
+
+    def getAttempts(self) -> int:
+        return self.__inputPinAttempts
+
+    def isLocked(self) -> bool:
+        return self.__locked
+
+    def setLockedStatus(self, status: bool) -> None:
+        self.__locked = status
+
+    def getData(self) -> dict:
+        data: dict = dict()
+        data.update({"cardNum": self.__number, "cardPIN": self.__pin})
+        if not self.__locked:
+            data.update({"status": "unlock"})
+        else:
+            data.update({"status": "lock"})
+        return data
