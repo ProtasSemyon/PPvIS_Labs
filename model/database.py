@@ -1,5 +1,5 @@
-import parserDOM
-import parserSAX
+from model.parserSAX import parse
+from model.parserDOM import writeXML
 
 
 class Database:
@@ -9,10 +9,10 @@ class Database:
         self.__data = list()
 
     def load(self, filepath) -> None:
-        self.__data = parserSAX.parse(filepath)
+        self.__data = parse(filepath)
 
     def save(self, filepath) -> None:
-        parserDOM.writeXML(filepath, self.__data)
+        writeXML(filepath, self.__data)
 
     def getData(self) -> list:
         return self.__data
