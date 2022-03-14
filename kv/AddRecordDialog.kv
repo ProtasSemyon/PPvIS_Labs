@@ -1,0 +1,38 @@
+<AddRecordDialog>:
+    GridLayout:
+        size: root.size
+        pos: root.pos
+        cols: 2
+        Label:
+            size_hint: 0.5, 1
+            text: "Name"
+        TextInput:
+            id: myName
+        Label:
+            size_hint: 0.5, 1
+            text: "Date of birth"
+        TextInput:
+            id: dateBirth
+            text: "YYYY-MM-DD"
+        Label:
+            size_hint: 0.5, 1
+            text: "Date of last appointment"
+        TextInput:
+            id: dateAppointment
+            text: "YYYY-MM-DD"
+        Label:
+            size_hint: 0.5, 1
+            text: "Vet fullname"
+        TextInput:
+            id: vetFullname
+        Label:
+            size_hint: 0.5, 1
+            text: "Diagnosis"
+        TextInput:
+            id: diagnosis
+        Button:
+            text: "Cancel"
+            on_release: root.cancel()
+        Button:
+            text: "Add"
+            on_release: root.add(Name=myName.text, DateOfBirth=dateBirth.text, DateOfLastAppointment=dateAppointment.text, VetFULLNAME=vetFullname.text, Diagnosis=diagnosis.text)

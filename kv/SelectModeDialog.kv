@@ -1,0 +1,17 @@
+<SelectModeDialog>:
+    BoxLayout:
+        size: root.size
+        pos: root.pos
+        orientation: "vertical"
+        Button:
+            text:"Diagnosis"
+            on_release: root.selectDiagnosis()
+        Button:
+            text:"Name and date of birth"
+            on_release: root.selectNameAndDateOfBirth()
+        Button:
+            text:"Vet fullname and date of last appointment"
+            on_release: root.selectVetNameAndDateOfLastAppointment()
+        Button:
+            text:"Cancel"
+            on_release: root.cancel()
