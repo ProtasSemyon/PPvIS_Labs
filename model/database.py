@@ -1,6 +1,7 @@
-from model.parserSAX import parse
-from model.parserDOM import writeXML
 from datetime import date
+
+from model.parserDOM import writeXML
+from model.parserSAX import parse
 
 
 class Database:
@@ -31,18 +32,39 @@ class Database:
                 result.append(record)
         return result
 
-    def searchByNameAndDateOfBirth(self, name:str, dateOfBirth: date):
+    def searchByNameAndDateOfBirth(self, name: str, dateOfBirth: date) -> list:
         result: list = list()
         for record in self.__data:
             if name == record["Name"] and dateOfBirth == record["DateOfBirth"]:
                 result.append(record)
         return result
 
-    def searchByVetNameAndDateOfLastAppointment(self, vetName: str, dateOfLastAppointment: date):
+    def searchByVetNameAndDateOfLastAppointment(self, vetName: str, dateOfLastAppointment: date) -> list:
         result: list = list()
         for record in self.__data:
             if vetName == record["VetFULLNAME"] and dateOfLastAppointment == record["DateOfLastAppointment"]:
                 result.append(record)
+        return result
+
+    def deleteByDiagnosis(self, diagnosis: str) -> int:
+        delete = self.searchByDiagnosis(diagnosis)
+        result = len(delete)
+        for element in delete:
+            self.__data.remove(element)
+        return result
+
+    def deleteByNameAndDateOfBirth(self, name: str, dateOfBirth: date) -> int:
+        delete = self.searchByNameAndDateOfBirth(name, dateOfBirth)
+        result = len(delete)
+        for element in delete:
+            self.__data.remove(element)
+        return result
+
+    def deleteByVetNameAndDateOfLastAppointment(self, vetName: str, dateOfLastAppointment: date) -> int:
+        delete = self.searchByVetNameAndDateOfLastAppointment(vetName, dateOfLastAppointment)
+        result = len(delete)
+        for element in delete:
+            self.__data.remove(element)
         return result
 
 
