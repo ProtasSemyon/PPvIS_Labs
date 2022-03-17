@@ -1,5 +1,6 @@
 from model.parserSAX import parse
 from model.parserDOM import writeXML
+from datetime import date
 
 
 class Database:
@@ -27,6 +28,20 @@ class Database:
         result: list = list()
         for record in self.__data:
             if diagnosis in record["Diagnosis"]:
+                result.append(record)
+        return result
+
+    def searchByNameAndDateOfBirth(self, name:str, dateOfBirth: date):
+        result: list = list()
+        for record in self.__data:
+            if name == record["Name"] and dateOfBirth == record["DateOfBirth"]:
+                result.append(record)
+        return result
+
+    def searchByVetNameAndDateOfLastAppointment(self, vetName: str, dateOfLastAppointment: date):
+        result: list = list()
+        for record in self.__data:
+            if vetName == record["VetFULLNAME"] and dateOfLastAppointment == record["DateOfLastAppointment"]:
                 result.append(record)
         return result
 
