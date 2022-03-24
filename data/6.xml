@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Table>
+    <Record>
+        <Name>Питон</Name>
+        <VetFULLNAME>Шмелов Иван Михайлович</VetFULLNAME>
+        <DateOfBirth>2016-06-22</DateOfBirth>
+        <DateOfLastAppointment>2021-04-04</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Шарик</Name>
+        <VetFULLNAME>Кожемяко Семён Андреевич</VetFULLNAME>
+        <DateOfBirth>2018-12-28</DateOfBirth>
+        <DateOfLastAppointment>2021-09-13</DateOfLastAppointment>
+        <Diagnosis>Воспаление лёгких</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Шарик</Name>
+        <VetFULLNAME>Петров Константин Николаевич</VetFULLNAME>
+        <DateOfBirth>2015-10-07</DateOfBirth>
+        <DateOfLastAppointment>2020-02-13</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней левой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Кеша</Name>
+        <VetFULLNAME>Греков Василий Андреевич</VetFULLNAME>
+        <DateOfBirth>2018-10-11</DateOfBirth>
+        <DateOfLastAppointment>2021-08-25</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа передней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Шарик</Name>
+        <VetFULLNAME>Кожемяко Арсений Артёмович</VetFULLNAME>
+        <DateOfBirth>2019-03-19</DateOfBirth>
+        <DateOfLastAppointment>2020-02-17</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Питон</Name>
+        <VetFULLNAME>Быков Михаил Петрович</VetFULLNAME>
+        <DateOfBirth>2019-10-25</DateOfBirth>
+        <DateOfLastAppointment>2021-01-06</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней левой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Питон</Name>
+        <VetFULLNAME>Поспелов Константин Артёмович</VetFULLNAME>
+        <DateOfBirth>2017-08-07</DateOfBirth>
+        <DateOfLastAppointment>2021-11-01</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней левой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Чебурашка</Name>
+        <VetFULLNAME>Петров Игорь Петрович</VetFULLNAME>
+        <DateOfBirth>2015-07-27</DateOfBirth>
+        <DateOfLastAppointment>2020-04-25</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа передней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Питон</Name>
+        <VetFULLNAME>Поспелов Андрей Михайлович</VetFULLNAME>
+        <DateOfBirth>2016-01-26</DateOfBirth>
+        <DateOfLastAppointment>2021-03-10</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Питон</Name>
+        <VetFULLNAME>Кожемяко Семён Артёмович</VetFULLNAME>
+        <DateOfBirth>2016-06-23</DateOfBirth>
+        <DateOfLastAppointment>2020-11-18</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа передней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Чебурашка</Name>
+        <VetFULLNAME>Поспелов Михаил Петрович</VetFULLNAME>
+        <DateOfBirth>2019-11-17</DateOfBirth>
+        <DateOfLastAppointment>2020-10-06</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Бобик</Name>
+        <VetFULLNAME>Поспелов Константин Николаевич</VetFULLNAME>
+        <DateOfBirth>2015-08-07</DateOfBirth>
+        <DateOfLastAppointment>2021-12-15</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Кеша</Name>
+        <VetFULLNAME>Быков Семён Андреевич</VetFULLNAME>
+        <DateOfBirth>2017-11-03</DateOfBirth>
+        <DateOfLastAppointment>2020-08-04</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Рыжик</Name>
+        <VetFULLNAME>Поспелов Семён Николаевич</VetFULLNAME>
+        <DateOfBirth>2019-11-08</DateOfBirth>
+        <DateOfLastAppointment>2020-10-26</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа передней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Чебурашка</Name>
+        <VetFULLNAME>Кожемяко Николай Николаевич</VetFULLNAME>
+        <DateOfBirth>2016-02-26</DateOfBirth>
+        <DateOfLastAppointment>2020-01-27</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Питон</Name>
+        <VetFULLNAME>Кожемяко Михаил Андреевич</VetFULLNAME>
+        <DateOfBirth>2015-10-13</DateOfBirth>
+        <DateOfLastAppointment>2021-04-01</DateOfLastAppointment>
+        <Diagnosis>Воспаление лёгких</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Шарик</Name>
+        <VetFULLNAME>Петров Андрей Андреевич</VetFULLNAME>
+        <DateOfBirth>2019-07-14</DateOfBirth>
+        <DateOfLastAppointment>2021-03-03</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Мурзик</Name>
+        <VetFULLNAME>Греков Василий Александрович</VetFULLNAME>
+        <DateOfBirth>2016-10-03</DateOfBirth>
+        <DateOfLastAppointment>2021-04-10</DateOfLastAppointment>
+        <Diagnosis>Воспаление лёгких</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Бобик</Name>
+        <VetFULLNAME>Быков Константин Семёнович</VetFULLNAME>
+        <DateOfBirth>2016-03-09</DateOfBirth>
+        <DateOfLastAppointment>2021-02-01</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней левой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Бобик</Name>
+        <VetFULLNAME>Шмелов Михаил Петрович</VetFULLNAME>
+        <DateOfBirth>2019-02-26</DateOfBirth>
+        <DateOfLastAppointment>2021-02-26</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Питон</Name>
+        <VetFULLNAME>Шмелов Иван Николаевич</VetFULLNAME>
+        <DateOfBirth>2015-12-05</DateOfBirth>
+        <DateOfLastAppointment>2020-09-20</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Кеша</Name>
+        <VetFULLNAME>Греков Василий Александрович</VetFULLNAME>
+        <DateOfBirth>2019-01-18</DateOfBirth>
+        <DateOfLastAppointment>2021-12-28</DateOfLastAppointment>
+        <Diagnosis>Воспаление лёгких</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Питон</Name>
+        <VetFULLNAME>Быков Константин Семёнович</VetFULLNAME>
+        <DateOfBirth>2019-08-09</DateOfBirth>
+        <DateOfLastAppointment>2021-04-07</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Рыжик</Name>
+        <VetFULLNAME>Поспелов Иван Андреевич</VetFULLNAME>
+        <DateOfBirth>2019-04-13</DateOfBirth>
+        <DateOfLastAppointment>2021-11-25</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Кеша</Name>
+        <VetFULLNAME>Кожемяко Николай Петрович</VetFULLNAME>
+        <DateOfBirth>2018-09-06</DateOfBirth>
+        <DateOfLastAppointment>2020-06-12</DateOfLastAppointment>
+        <Diagnosis>Воспаление лёгких</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Рыжик</Name>
+        <VetFULLNAME>Быков Пётр Андреевич</VetFULLNAME>
+        <DateOfBirth>2015-02-12</DateOfBirth>
+        <DateOfLastAppointment>2020-12-11</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней левой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Мурзик</Name>
+        <VetFULLNAME>Шмелов Михаил Петрович</VetFULLNAME>
+        <DateOfBirth>2017-06-14</DateOfBirth>
+        <DateOfLastAppointment>2021-10-04</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа передней левой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Мурзик</Name>
+        <VetFULLNAME>Петров Михаил Семёнович</VetFULLNAME>
+        <DateOfBirth>2015-04-11</DateOfBirth>
+        <DateOfLastAppointment>2020-01-10</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа передней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Мурзик</Name>
+        <VetFULLNAME>Петров Семён Михайлович</VetFULLNAME>
+        <DateOfBirth>2015-08-01</DateOfBirth>
+        <DateOfLastAppointment>2021-04-27</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа передней левой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Рыжик</Name>
+        <VetFULLNAME>Поспелов Пётр Михайлович</VetFULLNAME>
+        <DateOfBirth>2018-06-02</DateOfBirth>
+        <DateOfLastAppointment>2021-05-21</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Чебурашка</Name>
+        <VetFULLNAME>Кожемяко Пётр Семёнович</VetFULLNAME>
+        <DateOfBirth>2015-01-24</DateOfBirth>
+        <DateOfLastAppointment>2021-10-05</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа передней левой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Чебурашка</Name>
+        <VetFULLNAME>Петров Василий Артёмович</VetFULLNAME>
+        <DateOfBirth>2016-02-16</DateOfBirth>
+        <DateOfLastAppointment>2020-06-14</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней левой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Рыжик</Name>
+        <VetFULLNAME>Поспелов Игорь Андреевич</VetFULLNAME>
+        <DateOfBirth>2015-05-04</DateOfBirth>
+        <DateOfLastAppointment>2021-04-23</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Мурзик</Name>
+        <VetFULLNAME>Поспелов Арсений Семёнович</VetFULLNAME>
+        <DateOfBirth>2017-02-23</DateOfBirth>
+        <DateOfLastAppointment>2020-04-11</DateOfLastAppointment>
+        <Diagnosis>Воспаление лёгких</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Кеша</Name>
+        <VetFULLNAME>Шмелов Иван Михайлович</VetFULLNAME>
+        <DateOfBirth>2015-10-15</DateOfBirth>
+        <DateOfLastAppointment>2020-10-05</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней левой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Рыжик</Name>
+        <VetFULLNAME>Петров Константин Андреевич</VetFULLNAME>
+        <DateOfBirth>2019-03-08</DateOfBirth>
+        <DateOfLastAppointment>2020-09-25</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней левой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Бобик</Name>
+        <VetFULLNAME>Поспелов Игорь Семёнович</VetFULLNAME>
+        <DateOfBirth>2016-03-23</DateOfBirth>
+        <DateOfLastAppointment>2020-03-24</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Питон</Name>
+        <VetFULLNAME>Кожемяко Андрей Семёнович</VetFULLNAME>
+        <DateOfBirth>2019-03-26</DateOfBirth>
+        <DateOfLastAppointment>2021-09-12</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней левой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Рыжик</Name>
+        <VetFULLNAME>Греков Арсений Андреевич</VetFULLNAME>
+        <DateOfBirth>2016-03-08</DateOfBirth>
+        <DateOfLastAppointment>2021-06-17</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Кеша</Name>
+        <VetFULLNAME>Поспелов Михаил Александрович</VetFULLNAME>
+        <DateOfBirth>2017-02-02</DateOfBirth>
+        <DateOfLastAppointment>2021-04-18</DateOfLastAppointment>
+        <Diagnosis>Воспаление лёгких</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Бобик</Name>
+        <VetFULLNAME>Петров Николай Николаевич</VetFULLNAME>
+        <DateOfBirth>2015-01-18</DateOfBirth>
+        <DateOfLastAppointment>2021-01-14</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней левой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Кеша</Name>
+        <VetFULLNAME>Быков Арсений Андреевич</VetFULLNAME>
+        <DateOfBirth>2017-08-27</DateOfBirth>
+        <DateOfLastAppointment>2020-10-07</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Шарик</Name>
+        <VetFULLNAME>Греков Константин Петрович</VetFULLNAME>
+        <DateOfBirth>2016-10-07</DateOfBirth>
+        <DateOfLastAppointment>2021-04-22</DateOfLastAppointment>
+        <Diagnosis>Воспаление лёгких</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Кеша</Name>
+        <VetFULLNAME>Греков Николай Семёнович</VetFULLNAME>
+        <DateOfBirth>2016-09-23</DateOfBirth>
+        <DateOfLastAppointment>2020-10-19</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа передней левой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Мурзик</Name>
+        <VetFULLNAME>Поспелов Андрей Семёнович</VetFULLNAME>
+        <DateOfBirth>2016-01-02</DateOfBirth>
+        <DateOfLastAppointment>2021-04-21</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа передней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Кеша</Name>
+        <VetFULLNAME>Кожемяко Семён Семёнович</VetFULLNAME>
+        <DateOfBirth>2015-10-27</DateOfBirth>
+        <DateOfLastAppointment>2020-06-12</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа передней левой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Бобик</Name>
+        <VetFULLNAME>Быков Арсений Андреевич</VetFULLNAME>
+        <DateOfBirth>2019-10-21</DateOfBirth>
+        <DateOfLastAppointment>2020-02-17</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа передней правой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Кеша</Name>
+        <VetFULLNAME>Петров Михаил Андреевич</VetFULLNAME>
+        <DateOfBirth>2015-08-06</DateOfBirth>
+        <DateOfLastAppointment>2020-03-10</DateOfLastAppointment>
+        <Diagnosis>Воспаление лёгких</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Мурзик</Name>
+        <VetFULLNAME>Шмелов Арсений Петрович</VetFULLNAME>
+        <DateOfBirth>2019-11-01</DateOfBirth>
+        <DateOfLastAppointment>2020-07-24</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа задней левой лапы</Diagnosis>
+    </Record>
+    <Record>
+        <Name>Бобик</Name>
+        <VetFULLNAME>Греков Николай Николаевич</VetFULLNAME>
+        <DateOfBirth>2017-05-21</DateOfBirth>
+        <DateOfLastAppointment>2020-06-03</DateOfLastAppointment>
+        <Diagnosis>Растяжение голеностопа передней правой лапы</Diagnosis>
+    </Record>
+</Table>
