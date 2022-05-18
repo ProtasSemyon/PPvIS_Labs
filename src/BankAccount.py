@@ -54,11 +54,11 @@ class BankAccount:
 class Card:
     __numberSize = 16
     __pinSize = 4
-    __inputPinAttempts = 3
 
     def __init__(self, data: dict, account: BankAccount) -> None:
         self.__account = account
         self.__number = data["cardNum"]
+        self.__attempt = data["attempt"]
         if len(self.__number) != self.__numberSize or not self.__number.isdigit():
             raise ValueError("Incorrect card number")
 
@@ -72,6 +72,8 @@ class Card:
             self.__locked: bool = True
         else:
             raise ValueError("Invalid card status")
+        if self.__attempt >= 3:
+            self.__locked = True
 
     def checkPIN(self, pin: str) -> bool:
         if len(pin) is not self.__pinSize or not pin.isdigit():
@@ -87,18 +89,23 @@ class Card:
     def getNumber(self) -> str:
         return self.__number
 
-    def getAttempts(self) -> int:
-        return self.__inputPinAttempts
-
     def isLocked(self) -> bool:
         return self.__locked
 
     def setLockedStatus(self, status: bool) -> None:
         self.__locked = status
 
+    def getAttempts(self):
+        return self.__attempt
+
+    def increaseAttempts(self):
+        self.__attempt += 1
+        if self.__attempt >= 3:
+            self.__locked = True
+
     def getData(self) -> dict:
         data: dict = dict()
-        data.update({"cardNum": self.__number, "cardPIN": self.__pin})
+        data.update({"cardNum": self.__number, "cardPIN": self.__pin, "attempt":self.__attempt})
         if not self.__locked:
             data.update({"status": "unlock"})
         else:

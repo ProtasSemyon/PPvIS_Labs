@@ -12,150 +12,79 @@ class ATM:
     def __init__(self, bank: Bank, data: dict) -> None:
         self.__bank: Bank = bank
         self.__vault = BanknoteVault(data["cash"])
-
-    @staticmethod
-    def __selectNumberFromRange(upperLimit: int) -> int:
-        selectedNumber: int
-        while True:
-            number: str = input("Select number:  ")
-            if not number.isdigit():
-                print("Incorrect input, try again")
-                continue
-            number: int = int(number)
-            if upperLimit > number >= 0:
-                return number
-            else:
-                print("Incorrect input, try again")
-
-    def __selectCard(self) -> Card | None:
-        cards = self.__bank.getCards()
-        num: int = 1
-        for card in cards:
-            print(str(num) + ")", card.getNumber())
-            num += 1
-        print("0) Back")
-        option = self.__selectNumberFromRange(num)
-
-        if option == 0:
-            clear()
-            return None
-        return cards[option - 1]
-
-    def __enterPin(self) -> bool:
-        if self.__card.isLocked():
-            return False
-        for i in range(self.__card.getAttempts()):
-            while True:
-                pin = input("Enter PIN: ")
-                if len(pin) == 4 and pin.isdigit():
+        self.__insertedCard = None
+        self.__isPinEntered = True if data["isPinEntered"] == "True" else False
+        if data['insertedCard'] != 'None':
+            cardList = self.__bank.getCards()
+            for card in cardList:
+                if data['insertedCard'] == card.getNumber():
+                    self.__insertedCard = card
                     break
-                else:
-                    print("Incorrect input, try again")
-            if self.__card.checkPIN(pin):
-                return True
-            else:
-                print("Incorrect PIN, try again")
-        self.__card.setLockedStatus(True)
-        return False
 
-    def __insertCard(self, card: Card) -> None:
-        self.__card = card
-        print("Hello,", self.__card.getBankAccount().getOwnerFirstName(),
-              self.__card.getBankAccount().getOwnerLastName())
-        if self.__enterPin():
-            clear()
-            self.__mainMenu()
+    def isCardInserted(self):
+        return self.__insertedCard is not None
+
+    def changeInsertedState(self):
+        self.__insertedCard = None
+        self.__isPinEntered = False
+
+    def getCards(self):
+        return self.__bank.getCards()
+
+    def selectCard(self, number):
+        if number <= 0 or number > len(self.__bank.getCards()):
+            raise ValueError('number out of range')
+        self.__insertedCard = self.__bank.getCards()[number - 1]
+
+    def enterPin(self, pin):
+        if not self.__insertedCard:
+            raise ValueError('card is not inserted')
+        if self.__insertedCard.getAttempts() >= 3 or self.__insertedCard.isLocked():
+            raise ValueError('card is locked')
+        if self.__isPinEntered:
+            raise ValueError('pin entered')
+        if self.__insertedCard.checkPIN(pin):
+            self.__isPinEntered = True
+            return True
         else:
-            print("You're card is locked!")
-            return
+            self.__insertedCard.increaseAttempts()
+            return False
 
-    def __mainMenu(self):
-        clear()
-        countOperation: int = 4
-        print("1) View balance\n"
-              "2) Get cash\n"
-              "3) Phone payment\n"
-              "0) Get card")
-        option = self.__selectNumberFromRange(countOperation)
-        match option:
-            case 1:
-                clear()
-                self.__viewBalance()
-            case 2:
-                clear()
-                self.__giveMoney()
-            case 3:
-                clear()
-                self.__makeTelephonePayment()
-            case 0:
-                clear()
-                return
-            case _:
-                return
 
-    def __giveMoney(self):
-        self.__vault.print()
-        print("Input amount")
-        while True:
-            moneyCount = input()
-            if moneyCount.isdigit():
-                break
-            else:
-                print("Incorrect input, try again")
-        if int(moneyCount) > self.__card.getBankAccount().getBalance():
-            print("Not enough money in the account")
-            input("Press Enter...")
-            self.__mainMenu()
-            return
+    def withdrawMoney(self, moneyCount):
+        if not self.__insertedCard:
+            raise ValueError('card is not inserted')
+        if not self.__isPinEntered:
+            raise ValueError('pin not entered')
+        if int(moneyCount) > self.__insertedCard.getBankAccount().getBalance():
+            raise ValueError("not enough money in the account")
         cash = self.__vault.giveMoney(int(moneyCount))
         if cash is None:
-            print("ATM cannot dispense this amount")
-            input("Press Enter...")
-            self.__mainMenu()
-            return
-        for nominal in cash.keys():
-            if cash[nominal] != 0:
-                print(str(nominal) + "x" + str(cash[nominal]))
-        self.__card.getBankAccount().decreaseBalance(int(moneyCount))
-        input("Press Enter...")
-        self.__mainMenu()
+            raise ValueError("ATM cannot dispense this amount")
+        self.__insertedCard.getBankAccount().decreaseBalance(int(moneyCount))
+        return cash
 
-    def __makeTelephonePayment(self):
-        print("Input amount")
-        while True:
-            moneyCount = input()
-            if moneyCount.isdigit():
-                break
-            else:
-                print("Incorrect input, try again")
+    def makeTelephonePayment(self, amount, number):
+        if not self.__insertedCard:
+            raise ValueError('card is not inserted')
+        if not self.__isPinEntered:
+            raise ValueError('pin not entered')
+        if int(amount) > self.__insertedCard.getBankAccount().getBalance():
+            raise ValueError("not enough money in the account")
 
-        if int(moneyCount) > self.__card.getBankAccount().getBalance():
-            print("Not enough money in the account")
-            input("Press Enter...")
-            self.__mainMenu()
-            return
+        if not len(number) == 9 or not number.isdigit():
+            raise ValueError("incorrect phone number, expected 9 digits")
 
-        while True:
-            number = input("Enter your phone number:\n +375")
-            if len(number) == 9 and number.isdigit():
-                break
-            print("Incorrect input, try again")
+        self.__insertedCard.getBankAccount().decreaseBalance(int(amount))
 
-        self.__card.getBankAccount().decreaseBalance(int(moneyCount))
-        print("Payment successful")
-        input("Press Enter..")
-        self.__mainMenu()
-
-    def __viewBalance(self):
-        print("Account balance:", str(self.__card.getBankAccount().getBalance()))
-        input("Press Enter...")
-        self.__mainMenu()
+    def getCardBalance(self):
+        if not self.__insertedCard:
+            raise ValueError('card is not inserted')
+        if not self.__isPinEntered:
+            raise ValueError('pin not entered')
+        return self.__insertedCard.getBankAccount().getBalance()
 
     def getData(self) -> dict:
-        return {"cash": self.__vault.getData()}
-
-    def start(self) -> None:
-        card = self.__selectCard()
-        if card is None:
-            return
-        self.__insertCard(card)
+        return {"insertedCard": "None" if self.__insertedCard is None else self.__insertedCard.getNumber(),
+                "cash": self.__vault.getData(),
+                "isPinEntered":"True" if self.__isPinEntered else "False"}
