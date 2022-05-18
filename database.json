@@ -6,7 +6,7 @@
                 "firstName": "Semyon",
                 "lastName": "Protas",
                 "number": "0012357915",
-                "balance": 93,
+                "balance": 900,
                 "cards": [
                     {
                         "cardNum": "5578843370548293",
@@ -49,19 +49,19 @@
         "cash": [
             {
                 "nominal": 5,
-                "count": 24
+                "count": 20
             },
             {
                 "nominal": 10,
-                "count": 24
+                "count": 20
             },
             {
                 "nominal": 20,
-                "count": 25
+                "count": 24
             },
             {
                 "nominal": 50,
-                "count": 25
+                "count": 24
             }
         ],
         "isPinEntered": "False"

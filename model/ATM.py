@@ -1,11 +1,5 @@
-import os
-
-from src.Bank import Bank
-from src.BankAccount import Card
-from src.BanknoteVault import BanknoteVault
-
-clear = lambda: os.system("cls")
-
+from model.Bank import Bank
+from model.BanknoteVault import BanknoteVault
 
 class ATM:
 

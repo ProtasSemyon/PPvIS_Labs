@@ -1,6 +1,6 @@
 from typing import List
 
-from src.BankAccount import BankAccount, Card
+from model.BankAccount import BankAccount, Card
 
 
 class Bank:
