@@ -48,7 +48,10 @@ class IPresenter:
     def makeTelephonePayment(self, amount, phone):
         pass
 
-    def end_work(self):
+    def endWork(self):
+        pass
+
+    def checkCorrectPhone(self, phone):
         pass
 
 
@@ -92,5 +95,9 @@ class Presenter(IPresenter):
     def makeTelephonePayment(self, amount, phone):
         self.__atm.makeTelephonePayment(amount, phone)
 
-    def end_work(self):
+    def checkCorrectPhone(self, number):
+        if not len(number) == 9 or not number.isdigit():
+            raise ValueError("incorrect phone number, expected 9 digits")
+
+    def endWork(self):
         self.saveDatabase(self.__bank, self.__atm, self.__databasePath)
